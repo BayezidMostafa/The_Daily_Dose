@@ -1,11 +1,26 @@
+.all-tasks-container{
+    width: 95%;
+    margin: auto;
+}
 .heading-section{
+    margin-top: 2rem;
     display: flex;
     align-items: center;
 }
 .heading-section h1{
     font-size: 3rem;
+    color: #1D86DC;
+    margin: 2rem;
+    text-shadow: 0 0 40px black;
 }
 .heading-section img{
     width: 65px;
     border-radius: 50%;
+    box-shadow: 0 0 50px black;
+}
+.all-tasks{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
 }

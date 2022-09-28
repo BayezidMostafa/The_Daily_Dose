@@ -11,7 +11,7 @@ const Tasks = () => {
         .then(data => setTasks(data))
     }, [])
     return (
-        <div>
+        <div className='all-tasks-container'>
             <div className='heading-section'>
                 <img src={logo} alt="" />
                 <h1>THE DAILY DOSE</h1>
