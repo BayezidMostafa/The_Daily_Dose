@@ -6,6 +6,11 @@ const Task = (props) => {
     return (
         <div>
             <img src={picture} alt="" />
+            <div>
+                <p>{topic}</p>
+                <p>Time required: {req_time} minutes</p>
+            </div>
+            <button>Add To List</button>
         </div>
     );
 };
