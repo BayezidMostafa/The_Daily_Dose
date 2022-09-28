@@ -1,0 +1,38 @@
+[
+    {
+        "id": "01",
+        "picture": "../src/images/morning-walk.jpg",
+        "req_time": 30,
+        "topic": "Morning Walk"
+    },
+    {
+        "id": "02",
+        "picture": "../src/images/gym-time.jpg",
+        "req_time": 60,
+        "topic": "Gym Time"
+    },
+    {
+        "id": "03",
+        "picture": "../src/images/reading-a-book.jpg",
+        "req_time": 45,
+        "topic": "Reading a Book"
+    },
+    {
+        "id": "04",
+        "picture": "../src/images/project-handling.jpg",
+        "req_time": 120,
+        "topic": "Project Handling"
+    },
+    {
+        "id": "05",
+        "picture": "../src/images/team-research.jpg",
+        "req_time": 60,
+        "topic": "Team Research"
+    },
+    {
+        "id": "06",
+        "picture": "../src/images/playing-badminton.jpg",
+        "req_time": 40,
+        "topic": "Playing Badminton"
+    }
+]

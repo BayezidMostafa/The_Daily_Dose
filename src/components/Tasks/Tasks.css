@@ -1,0 +1,11 @@
+.heading-section{
+    display: flex;
+    align-items: center;
+}
+.heading-section h1{
+    font-size: 3rem;
+}
+.heading-section img{
+    width: 65px;
+    border-radius: 50%;
+}
