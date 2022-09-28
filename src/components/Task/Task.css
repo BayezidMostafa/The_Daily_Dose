@@ -1,0 +1,14 @@
+.task-container {}
+
+.task-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.task-info-container {
+    margin-left: 10px;
+}
+
+.task-btn {
+    text-align: center;
+}
