@@ -115,5 +115,24 @@
 @media screen and (max-width: 600px) {
     .profile-container{
         border-radius: 0 0 10px 10px;
+        height: 100%;
+    }
+    .account-info{
+        flex-direction: column;
+        text-align: center;
+        margin-right: 40px;
+    }
+    .user-information{
+        flex-direction: column;
+        width: 30%;
+        height: 200px;
+        text-align: center;
+    }
+    .break-btn-container{
+        flex-direction: column;
+        width: 70%;
+    }
+    .break-btn-container button{
+        margin-bottom: 10px;
     }
 }

@@ -34,13 +34,19 @@
     font-size: 1.2rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
     .all-question-answer-container{
+        width: 95%;
+        margin: auto;
         flex-direction: column;
         justify-content: center;
     }
     .question-answer-container{
         width: 90%;
+        margin: 20px auto;
+    }
+    .blogHeading{
+        font-size: 2rem;
     }
 }
 
@@ -50,6 +56,7 @@
         justify-content: center;
     }
     .question-answer-container{
+        margin: 20px auto;
         width: 90%;
     }
 }
