@@ -26,6 +26,16 @@ const Profile = () => {
                     <p>Age</p>
                 </div>
             </div>
+            <div>
+                <p className='break-text'>Need A Break?</p>
+                <div className='break-btn-container'>
+                    <button>10m</button>
+                    <button>20m</button>
+                    <button>30m</button>
+                    <button>40m</button>
+                    <button>50m</button>
+                </div>
+            </div>
         </div>
     );
 };
