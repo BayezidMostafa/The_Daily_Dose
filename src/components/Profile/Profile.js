@@ -5,6 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = (props) => {
+    const { profiles } = props;
     const [breaks, setBreaks] = useState([]);
     const breakTimeHandler = (time) => {
         setBreaks(time);
@@ -16,12 +17,11 @@ const Profile = (props) => {
             setBreaks(getStoredData);
         }
     }, [getStoredData])
-    const { profiles } = props
     let reqTime = 0;
     for (const profile of profiles) {
         reqTime = reqTime + profile.req_time;
     }
-    const loadToast = () => toast("Task Completed!");
+    const loadToast = () => toast("Yahoo! Task Completed!");
     return (
         <div className='profile-container'>
             <div className='account-info'>
