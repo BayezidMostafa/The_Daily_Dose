@@ -36,6 +36,20 @@ const Profile = () => {
                     <button>50m</button>
                 </div>
             </div>
+            <div className='time-information-container'>
+                <p className='task-time-info-title'>Task Time Information</p>
+                <div className='time-info'>
+                    <p>Task Time</p>
+                    <p>{} Minutes</p>
+                </div>
+                <div className='time-info'>
+                    <p>Break Time</p>
+                    <p>{} Minutes</p>
+                </div>
+            </div>
+            <div className='task-complete'>
+                <button>Task Complete</button>
+            </div>
         </div>
     );
 };

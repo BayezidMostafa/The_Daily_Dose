@@ -1,6 +1,14 @@
+.all-content-container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
 .all-tasks-container{
     width: 95%;
     margin: auto;
+}
+.main-profile-container{
+    position: relative;
 }
 .heading-section{
     margin-top: 2rem;
