@@ -1,17 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import './Profile.css';
-import profile_logo from '../../profile-logo.png'
+import profile_logo from '../../profile-logo.png';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = (props) => {
     const [breaks, setBreaks] = useState([])
     const breakTimeHandler = (time) => {
         setBreaks(time);
+        localStorage.setItem('time', time);
     }
-    const {profiles} = props
+    const getStoredData = localStorage.getItem('time');
+    useEffect(()=>{
+        if(getStoredData){
+            setBreaks(getStoredData);
+        }
+    }, [getStoredData])
+    const { profiles } = props
     let reqTime = 0;
-    for(const profile of profiles){
+    for (const profile of profiles) {
         reqTime = reqTime + profile.req_time;
     }
+    const loadToast = () => toast("Task Completed!");
     return (
         <div className='profile-container'>
             <div className='account-info'>
@@ -38,11 +48,11 @@ const Profile = (props) => {
             <div>
                 <p className='break-text'>Need A Break?</p>
                 <div className='break-btn-container'>
-                    <button onClick={()=>breakTimeHandler(10)}>10m</button>
-                    <button onClick={()=>breakTimeHandler(20)}>20m</button>
-                    <button onClick={()=>breakTimeHandler(30)}>30m</button>
-                    <button onClick={()=>breakTimeHandler(40)}>40m</button>
-                    <button onClick={()=>breakTimeHandler(50)}>50m</button>
+                    <button onClick={() => breakTimeHandler(10)}>10m</button>
+                    <button onClick={() => breakTimeHandler(20)}>20m</button>
+                    <button onClick={() => breakTimeHandler(30)}>30m</button>
+                    <button onClick={() => breakTimeHandler(40)}>40m</button>
+                    <button onClick={() => breakTimeHandler(50)}>50m</button>
                 </div>
             </div>
             <div className='time-information-container'>
@@ -57,16 +67,21 @@ const Profile = (props) => {
                 </div>
             </div>
             <div className='task-complete'>
-                <button>Task Complete</button>
+                <button onClick={loadToast}>Task Complete</button>
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                />
             </div>
         </div>
     );
 };
 
 export default Profile;
-
-
-// useEffect(()=>{
-//     const localstorageData = localStorage.getItem('যে নামে সেট করেছেন')
-//     console.log(localstorageData)
-//     },[])
