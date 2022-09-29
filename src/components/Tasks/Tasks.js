@@ -6,12 +6,17 @@ import './Tasks.css'
 
 const Tasks = () => {
     const [tasks, setTasks] = useState([])
+    const [profiles, setProfiles] = useState([])
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setTasks(data))
     }, [])
-
+    const startNowBtnHandle = (task) => {
+        const newProfile = [...profiles, task];
+        setProfiles(newProfile);
+        // console.log(newProfile);
+    }
     return (
         <div className='all-content-container'>
             <div className='all-tasks-container'>
@@ -21,12 +26,12 @@ const Tasks = () => {
                 </div>
                 <div className='all-tasks'>
                     {
-                        tasks.map(task => <Task task={task} key={task.id}></Task>)
+                        tasks.map(task => <Task task={task} key={task.id} startNowBtnHandle={startNowBtnHandle}></Task>)
                     }
                 </div>
             </div>
             <div className='main-profile-container'>
-                <Profile></Profile>
+                <Profile profiles={profiles}></Profile>
             </div>
         </div>
     );

@@ -2,7 +2,13 @@ import React from 'react';
 import './Profile.css';
 import profile_logo from '../../profile-logo.png'
 
-const Profile = () => {
+const Profile = (props) => {
+    const {profiles} = props
+    let reqTime = 0;
+    
+    for(const profile of profiles){
+        reqTime = reqTime + profile.req_time;
+    }
     return (
         <div className='profile-container'>
             <div className='account-info'>
@@ -40,7 +46,7 @@ const Profile = () => {
                 <p className='task-time-info-title'>Task Time Information</p>
                 <div className='time-info'>
                     <p>Task Time</p>
-                    <p>{} Minutes</p>
+                    <p>{reqTime} Minutes</p>
                 </div>
                 <div className='time-info'>
                     <p>Break Time</p>
@@ -55,3 +61,9 @@ const Profile = () => {
 };
 
 export default Profile;
+
+
+// useEffect(()=>{
+//     const localstorageData = localStorage.getItem('যে নামে সেট করেছেন')
+//     console.log(localstorageData)
+//     },[])
