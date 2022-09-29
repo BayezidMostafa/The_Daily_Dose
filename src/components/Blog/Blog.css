@@ -1,5 +1,6 @@
 .blog-container {
     text-align: center;
+    margin-bottom: 4rem;
 }
 
 .blogHeading {
@@ -10,21 +11,45 @@
     text-shadow: 0 0 50px rgb(255, 255, 255);
     margin-bottom: 40px;
 }
-
+.all-question-answer-container{
+    display: flex;
+}
 .question-answer-container {
+    width: 30%;
     text-align: left;
     background-color: #1D85DC;
     color: white;
     padding: 20px;
     box-shadow: 0 3px 50px black;
     border-radius: 15px;
-    margin: 20px 0;
+    margin: 20px 10px;
 }
 .question{
     font-size: 1.7rem;
     font-weight: 600;
+    margin-bottom: 30px;
 }
 .answer{
     margin-bottom: 10px;
     font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .all-question-answer-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .question-answer-container{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .all-question-answer-container{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .question-answer-container{
+        width: 90%;
+    }
 }

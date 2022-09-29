@@ -1,11 +1,13 @@
 .all-content-container{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 2rem;
+    display: flex;
     position: relative;
+    justify-content: space-between;
+}
+.main-profile-container{
+    width: 25%;
 }
 .all-tasks-container{
-    width: 95%;
+    width: 70%;
     margin: auto;
 }
 .heading-section{
@@ -29,4 +31,28 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    .all-content-container{
+        flex-direction: column-reverse;
+    }
+    .main-profile-container{
+        width: 80%;
+        margin: auto;
+    }
+    .all-tasks{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .all-tasks{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .all-tasks{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

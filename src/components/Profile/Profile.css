@@ -110,3 +110,10 @@
     background-color: #176db3;
     cursor: pointer;
 }
+
+
+@media screen and (max-width: 600px) {
+    .profile-container{
+        border-radius: 0 0 10px 10px;
+    }
+}
