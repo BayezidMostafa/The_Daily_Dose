@@ -1,0 +1,42 @@
+.profile-container{
+    background-color: #282C34;
+}
+.account-info{
+    margin: 30px 0 0 30px;
+    display: flex;
+    align-items: center;
+}
+.account-info img{
+    width: 70px;
+    display: block;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    color: white;
+}
+.account-name{
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.account-location{
+    font-size: 1.1rem;
+    color: gray;
+}
+.user-information{
+    font-size: 1.4rem;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 40px auto;
+    padding: 25px 30px;
+    border-radius: 15px;
+    background-color: #1D86DC;
+    font-weight: 600;
+    box-shadow: 0 0 50px black;
+}
+.disabled-color{
+    color: rgb(231, 231, 231);
+}

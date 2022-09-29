@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import logo from '../../main-logo.jpg';
+import logo from '../../main-logo.png';
 import Task from '../Task/Task';
 import './Tasks.css'
 
