@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Profile = (props) => {
-    const [breaks, setBreaks] = useState([])
+    const [breaks, setBreaks] = useState([]);
     const breakTimeHandler = (time) => {
         setBreaks(time);
         localStorage.setItem('time', time);
@@ -70,7 +70,7 @@ const Profile = (props) => {
                 <button onClick={loadToast}>Task Complete</button>
                 <ToastContainer
                     position="top-center"
-                    autoClose={5000}
+                    autoClose={4000}
                     hideProgressBar={false}
                     newestOnTop={false}
                     closeOnClick

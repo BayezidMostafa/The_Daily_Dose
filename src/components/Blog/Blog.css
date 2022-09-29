@@ -1,10 +1,30 @@
-.blog-container{
+.blog-container {
     text-align: center;
 }
-.blogHeading{
+
+.blogHeading {
     padding-top: 20px;
     font-size: 3rem;
     font-weight: 700;
     color: #1D86DC;
-    text-shadow: 0 0 50px black;
+    text-shadow: 0 0 50px rgb(255, 255, 255);
+    margin-bottom: 40px;
+}
+
+.question-answer-container {
+    text-align: left;
+    background-color: #1D85DC;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 3px 50px black;
+    border-radius: 15px;
+    margin: 20px 0;
+}
+.question{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+.answer{
+    margin-bottom: 10px;
+    font-size: 1.2rem;
 }
