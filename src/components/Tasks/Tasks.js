@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../../main-logo.png';
+import Blog from '../Blog/Blog';
 import Profile from '../Profile/Profile';
 import Task from '../Task/Task';
 import './Tasks.css'
@@ -28,6 +29,9 @@ const Tasks = () => {
                     {
                         tasks.map(task => <Task task={task} key={task.id} startNowBtnHandle={startNowBtnHandle}></Task>)
                     }
+                </div>
+                <div>
+                    <Blog></Blog>
                 </div>
             </div>
             <div className='main-profile-container'>

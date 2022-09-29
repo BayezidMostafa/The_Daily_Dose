@@ -1,0 +1,10 @@
+.blog-container{
+    text-align: center;
+}
+.blogHeading{
+    padding-top: 20px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #1D86DC;
+    text-shadow: 0 0 50px black;
+}

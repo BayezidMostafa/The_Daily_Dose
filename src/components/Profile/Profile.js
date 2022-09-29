@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Profile.css';
 import profile_logo from '../../profile-logo.png'
 
 const Profile = (props) => {
+    const [breaks, setBreaks] = useState([])
+    const breakTimeHandler = (time) => {
+        setBreaks(time);
+    }
     const {profiles} = props
     let reqTime = 0;
-    
     for(const profile of profiles){
         reqTime = reqTime + profile.req_time;
     }
@@ -35,11 +38,11 @@ const Profile = (props) => {
             <div>
                 <p className='break-text'>Need A Break?</p>
                 <div className='break-btn-container'>
-                    <button>10m</button>
-                    <button>20m</button>
-                    <button>30m</button>
-                    <button>40m</button>
-                    <button>50m</button>
+                    <button onClick={()=>breakTimeHandler(10)}>10m</button>
+                    <button onClick={()=>breakTimeHandler(20)}>20m</button>
+                    <button onClick={()=>breakTimeHandler(30)}>30m</button>
+                    <button onClick={()=>breakTimeHandler(40)}>40m</button>
+                    <button onClick={()=>breakTimeHandler(50)}>50m</button>
                 </div>
             </div>
             <div className='time-information-container'>
@@ -50,7 +53,7 @@ const Profile = (props) => {
                 </div>
                 <div className='time-info'>
                     <p>Break Time</p>
-                    <p>{} Minutes</p>
+                    <p>{breaks} Minutes</p>
                 </div>
             </div>
             <div className='task-complete'>

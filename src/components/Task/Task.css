@@ -3,7 +3,7 @@
     border-radius: 15px;
     padding: 20px;
     box-shadow: 0 0 30px #20232A;
-    height: 350px;
+    min-height: 350px;
     position: relative;
 }
 
